@@ -4,11 +4,14 @@ public class Main {
 
     public static void main(String[] args)
     {
-        Animal Dog = new Animal("husky", 3, "Barnie");
+        Animal barnie = new Animal("husky", 3, "Barnie");
+        Animal viper = new Animal("snake", 2, "Viper");
 
-        Human pracownik = new Human("Jan", "Kowalski", "Manager", 3, true);
+        Human worker = new Human("Jan", "Kowalski", "Manager", 22, true);
+        Human worker1 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false);
 
-        Phone mojTelefon = new Phone("Samsung", false, "Android");
+        Phone myPhone = new Phone("Samsung", false, "Android");
+        Phone friendsPhone = new Phone("Iphone", true, "iOS");
 
     }
 }
