@@ -13,5 +13,7 @@ public class Main {
         Phone myPhone = new Phone("Samsung", false, "Android");
         Phone friendsPhone = new Phone("Iphone", true, "iOS");
 
+        System.out.println(barnie);
+        System.out.println(worker.firstName);
     }
 }
