@@ -1,4 +1,6 @@
-package pl.gda.wsb;
+package pl.gda.wsb.devices;
+
+import pl.gda.wsb.CarManufacturers;
 
 public class Car {
     final String model;
@@ -10,6 +12,18 @@ public class Car {
         this.model = model;
         this.producer = producer;
         this.color = color;
+        this.doors = doors;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getDoors() {
+        return doors;
+    }
+
+    public void setDoors(int doors) {
         this.doors = doors;
     }
 

@@ -1,5 +1,8 @@
 package pl.gda.wsb;
 
+import pl.gda.wsb.devices.Car;
+import pl.gda.wsb.devices.Phone;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -45,8 +48,8 @@ public class Main {
             viper.takeForAWalk();
         }
 
-        System.out.println(worker.car.model);
-        System.out.println(worker1.car.doors);
+        System.out.println(worker.car.getModel());
+        System.out.println(worker1.car.getDoors());
 
         System.out.println("Wynik porównania: " + worker2.equals(worker3));
         System.out.println(worker);
