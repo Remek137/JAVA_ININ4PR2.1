@@ -6,7 +6,7 @@ public class Animal {
     String race;
     int age;
     String name;
-    Double weight;
+    private Double weight;
     final String species;
 
     public Animal(String race, int age, String name, Double weight, final String species) {
@@ -17,6 +17,10 @@ public class Animal {
         this.species = species;
         if(species == "pies") this.weight = 25.0;
         else if(species == "kot") this.weight = 5.0;
+    }
+
+    public Double getWeight() {
+        return weight;
     }
 
     void feed(){
