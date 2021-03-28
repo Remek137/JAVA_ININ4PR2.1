@@ -15,10 +15,10 @@ public class Main {
         Car car1 = new Car("Prelude", CarManufacturers.HONDA, "Blue", 3);
         Car car2 = new Car("E class", CarManufacturers.MB, "White", 5);
 
-        Human worker = new Human("Jan", "Kowalski", "Manager", 22, true, barnie, car1);
-        Human worker1 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, viper, car2);
-        Human worker2 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, viper, car2);
-        Human worker3 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, viper, car2);
+        Human worker = new Human("Jan", "Kowalski", "Manager", 22, true, barnie, car1, 3500.00);
+        Human worker1 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, viper, car2, 2000.00);
+        Human worker2 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, viper, car2, 2000.00);
+        Human worker3 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, viper, car2, 2000.00);
 
         Phone myPhone = new Phone("Samsung", false, "Android");
         Phone friendsPhone = new Phone("Iphone", true, "iOS");
@@ -56,5 +56,9 @@ public class Main {
         System.out.println(viper);
         System.out.println(car1);
         System.out.println(myPhone);
+
+        worker.setSalary(-5.);
+        System.out.println("Wypłata: " + worker.getSalary());
+        worker.setSalary(5000.);
     }
 }

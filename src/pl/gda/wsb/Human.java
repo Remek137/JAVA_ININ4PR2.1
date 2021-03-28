@@ -2,10 +2,14 @@ package pl.gda.wsb;
 
 import pl.gda.wsb.devices.Car;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Objects;
 
 public class Human {
 
+    SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
+    Date date = new Date(System.currentTimeMillis());
     String firstName;
     String lastName;
     String position;
@@ -13,8 +17,9 @@ public class Human {
     boolean isWorking;
     Animal pet;
     Car car;
+    private Double salary;
 
-    public Human(String firstName, String lastName, String position, int age, boolean isWorking, Animal pet, Car car) {
+    public Human(String firstName, String lastName, String position, int age, boolean isWorking, Animal pet, Car car, Double salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.position = position;
@@ -22,6 +27,7 @@ public class Human {
         this.isWorking = isWorking;
         this.pet = pet;
         this.car = car;
+        this.salary = salary;
     }
 
     @Override
@@ -35,6 +41,21 @@ public class Human {
     @Override
     public int hashCode() {
         return Objects.hash(firstName, lastName, position, age, isWorking, pet, car);
+    }
+
+    public Double getSalary() {
+        System.out.println(date + " Pobrano dane o wypłacie usera " + this.lastName);
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        if(salary>0){
+        this.salary = salary;
+        System.out.println("Nowe dane zostały wysłane do systemu księgowego!");
+        System.out.println("Czeka na Ciebie nowy aneks do podpisania!");
+        System.out.println("Nowe dane zostały wysłane i dostarczone do ZUS i US!");
+        }
+        else System.out.println("Wypłata nie może być ujemna!");
     }
 
     @Override
