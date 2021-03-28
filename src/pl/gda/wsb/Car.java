@@ -12,4 +12,14 @@ public class Car {
         this.color = color;
         this.doors = doors;
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model='" + model + '\'' +
+                ", producer=" + producer +
+                ", color='" + color + '\'' +
+                ", doors=" + doors +
+                '}';
+    }
 }

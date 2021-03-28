@@ -11,4 +11,13 @@ public class Phone {
         this.isShattered = isShattered;
         this.system = system;
     }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "manufacturer='" + manufacturer + '\'' +
+                ", isShattered=" + isShattered +
+                ", system='" + system + '\'' +
+                '}';
+    }
 }

@@ -49,5 +49,9 @@ public class Main {
         System.out.println(worker1.car.doors);
 
         System.out.println("Wynik porównania: " + worker2.equals(worker3));
+        System.out.println(worker);
+        System.out.println(viper);
+        System.out.println(car1);
+        System.out.println(myPhone);
     }
 }

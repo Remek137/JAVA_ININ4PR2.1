@@ -34,4 +34,17 @@ public class Human {
     public int hashCode() {
         return Objects.hash(firstName, lastName, position, age, isWorking, pet, car);
     }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", position='" + position + '\'' +
+                ", age=" + age +
+                ", isWorking=" + isWorking +
+                ", pet=" + pet +
+                ", car=" + car +
+                '}';
+    }
 }

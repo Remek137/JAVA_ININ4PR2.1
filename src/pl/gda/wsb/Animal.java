@@ -36,4 +36,15 @@ public class Animal {
         }
         else System.out.println("Zwierzak " + this.name + " umarł!");
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "race='" + race + '\'' +
+                ", age=" + age +
+                ", name='" + name + '\'' +
+                ", weight=" + weight +
+                ", species='" + species + '\'' +
+                '}';
+    }
 }
