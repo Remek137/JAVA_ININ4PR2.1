@@ -27,13 +27,13 @@ public class Animal {
         if(this.weight>0){
         this.weight++;
         }
-        else System.out.println("Zwierzak umarł!");
+        else System.out.println("Zwierzak " + this.name + " umarł!");
     }
 
     void takeForAWalk(){
         if(this.weight>0){
             this.weight--;
         }
-        else System.out.println("Zwierzak umarł!");
+        else System.out.println("Zwierzak " + this.name + " umarł!");
     }
 }
