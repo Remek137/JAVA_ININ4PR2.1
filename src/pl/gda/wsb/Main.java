@@ -62,6 +62,6 @@ public class Main {
         worker.setSalary(5000.);
 
         worker.setCar(car1);
-        worker.setCar(car2);
+        worker.setCar(car2);//ss
     }
 }
