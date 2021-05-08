@@ -12,8 +12,8 @@ public class Main {
         Animal barnie = new Animal("husky", 3, "Barnie", 30.0, "pies");
         Animal viper = new Animal("snake", 2, "Viper", 10.0, "kot");
 
-        Car car1 = new Car("Prelude", CarManufacturers.HONDA, "Blue", 3);
-        Car car2 = new Car("E class", CarManufacturers.MB, "White", 5);
+        Car car1 = new Car("Prelude", CarManufacturers.HONDA, "Blue", 3, 2000.00);
+        Car car2 = new Car("E class", CarManufacturers.MB, "White", 5, 70000.00);
 
         Human worker = new Human("Jan", "Kowalski", "Manager", 22, true, barnie, car1, 3500.00);
         Human worker1 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, viper, car2, 2000.00);
@@ -48,8 +48,8 @@ public class Main {
             viper.takeForAWalk();
         }
 
-        System.out.println(worker.car.getModel());
-        System.out.println(worker1.car.getDoors());
+        System.out.println(worker.getCar().getModel());
+        System.out.println(worker1.getCar().getDoors());
 
         System.out.println("Wynik porównania: " + worker2.equals(worker3));
         System.out.println(worker);
@@ -60,5 +60,8 @@ public class Main {
         worker.setSalary(-5.);
         System.out.println("Wypłata: " + worker.getSalary());
         worker.setSalary(5000.);
+
+        worker.setCar(car1);
+        worker.setCar(car2);
     }
 }
