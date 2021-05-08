@@ -1,15 +1,22 @@
 package pl.gda.wsb.devices;
 
-public class Phone {
+import pl.gda.wsb.CarManufacturers;
+
+public class Phone extends Device {
 
     String manufacturer;
     boolean isShattered;
     String system;
 
-    public Phone(String manufacturer, boolean isShattered, String system) {
+    public Phone(CarManufacturers producer, String model, int yearOfProduction, String manufacturer, boolean isShattered, String system) {
+        super(model, producer, yearOfProduction);
         this.manufacturer = manufacturer;
         this.isShattered = isShattered;
         this.system = system;
+    }
+
+    public void turnOn(){
+        System.out.println("-------DziałaPhone");
     }
 
     @Override

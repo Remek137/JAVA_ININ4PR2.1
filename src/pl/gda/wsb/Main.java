@@ -12,16 +12,17 @@ public class Main {
         Animal barnie = new Animal("husky", 3, "Barnie", 30.0, "pies");
         Animal viper = new Animal("snake", 2, "Viper", 10.0, "kot");
 
-        Car car1 = new Car("Prelude", CarManufacturers.HONDA, "Blue", 3, 2000.00);
-        Car car2 = new Car("E class", CarManufacturers.MB, "White", 5, 70000.00);
+        Car car1 = new Car("Prelude", CarManufacturers.HONDA, 1998, "Blue", 3, 2000.00);
+        Car car2 = new Car("E class", CarManufacturers.MB, 1998, "White", 5,  70000.00);
 
         Human worker = new Human("Jan", "Kowalski", "Manager", 22, true, barnie, car1, 3500.00);
         Human worker1 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, viper, car2, 2000.00);
         Human worker2 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, viper, car2, 2000.00);
         Human worker3 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, viper, car2, 2000.00);
 
-        Phone myPhone = new Phone("Samsung", false, "Android");
-        Phone friendsPhone = new Phone("Iphone", true, "iOS");
+        //Phone myPhone = new Phone("Samsung", false, "Android");
+        //Phone friendsPhone = new Phone("Iphone", true, "iOS");
+        Phone myPhone = new Phone(CarManufacturers.HONDA, "S8", 2016, "Samsung", true, "Android");
 
 
 
@@ -62,6 +63,9 @@ public class Main {
         worker.setSalary(5000.);
 
         worker.setCar(car1);
-        worker.setCar(car2);//ss
+        worker.setCar(car2);
+
+        myPhone.turnOn();
+        car1.turnOn();
     }
 }
