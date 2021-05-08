@@ -1,6 +1,6 @@
 package pl.gda.wsb;
 
-public class Animal {
+public class Animal implements Salleable {
 
     static boolean isAlive = true;
     String race;
@@ -35,6 +35,20 @@ public class Animal {
             this.weight--;
         }
         else System.out.println("Zwierzak " + this.name + " umarł!");
+    }
+
+    public void sell(Human seller, Human buyer, Double price){
+        if(seller.pet != null){
+            System.out.println(seller.firstName + " posiada zwierzę");
+            if(seller.cash > price){
+                System.out.println(seller.firstName + " posiada wystarczająco gotówki");
+                seller.cash -= price;
+                buyer.cash += price;
+                buyer.pet = seller.pet;
+                seller.pet = null;
+                System.out.println("Transakcja udana");
+            }
+        }
     }
 
     @Override

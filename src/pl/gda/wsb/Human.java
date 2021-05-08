@@ -1,6 +1,7 @@
 package pl.gda.wsb;
 
 import pl.gda.wsb.devices.Car;
+import pl.gda.wsb.devices.Phone;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -18,8 +19,10 @@ public class Human {
     Animal pet;
     private Car car;
     private Double salary;
+    Double cash;
+    public Phone phone;
 
-    public Human(String firstName, String lastName, String position, int age, boolean isWorking, Animal pet, Car car, Double salary) {
+    public Human(String firstName, String lastName, String position, int age, boolean isWorking, Animal pet, Car car, Double salary, Double cash, Phone phone) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.position = position;
@@ -28,10 +31,36 @@ public class Human {
         this.pet = pet;
         this.car = car;
         this.salary = salary;
+        this.cash = cash;
+        this.phone = phone;
     }
 
     public Car getCar() {
         return car;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public Animal getPet() {
+        return pet;
+    }
+
+    public void setPet(Animal pet) {
+        this.pet = pet;
+    }
+
+    public Double getCash() {
+        return cash;
+    }
+
+    public void setCash(Double cash) {
+        this.cash = cash;
     }
 
     public void setCar(Car car) {
@@ -44,6 +73,10 @@ public class Human {
             this.car = car;
         }
         else System.out.println("Sorry, musisz zwiększyć swoją wypłatę!");
+    }
+
+    public void setCarForce(Car car) {
+        this.car = car;
     }
 
     @Override

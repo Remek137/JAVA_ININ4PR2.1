@@ -15,14 +15,15 @@ public class Main {
         Car car1 = new Car("Prelude", CarManufacturers.HONDA, 1998, "Blue", 3, 2000.00);
         Car car2 = new Car("E class", CarManufacturers.MB, 1998, "White", 5,  70000.00);
 
-        Human worker = new Human("Jan", "Kowalski", "Manager", 22, true, barnie, car1, 3500.00);
-        Human worker1 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, viper, car2, 2000.00);
-        Human worker2 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, viper, car2, 2000.00);
-        Human worker3 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, viper, car2, 2000.00);
+        Phone myPhone = new Phone(CarManufacturers.HONDA, "S8", 2016, "Samsung", true, "Android");
+
+        Human worker = new Human("Jan", "Kowalski", "Manager", 22, true, barnie, car1, 3500.00, 1500.00, myPhone);
+        Human worker1 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, viper, car2, 2000.00, 1500.00, myPhone);
+        Human worker2 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, barnie, car2, 2000.00, 1500.00, myPhone);
+        Human worker3 = new Human("Pawel", "Kowalczyk", "Cleaner", 35, false, barnie, car1, 2000.00, 1500.00, myPhone);
 
         //Phone myPhone = new Phone("Samsung", false, "Android");
         //Phone friendsPhone = new Phone("Iphone", true, "iOS");
-        Phone myPhone = new Phone(CarManufacturers.HONDA, "S8", 2016, "Samsung", true, "Android");
 
 
 
@@ -67,5 +68,17 @@ public class Main {
 
         myPhone.turnOn();
         car1.turnOn();
+
+        System.out.println("Przed transakcja: sprzedający:" + worker1.firstName + " ma peta:" + worker1.pet + "\n kupujacy:" + worker3.firstName + " ma peta:" + worker3.pet);
+        viper.sell(worker1, worker3, 50.00);
+        System.out.println("Po transakcja: sprzedający:" + worker1.firstName + " ma peta:" + worker1.pet + "\n kupujacy:" + worker3.firstName + " ma peta:" + worker3.pet);
+
+        System.out.println("Przed transakcja: sprzedający:" + worker1.firstName + " ma car:" + worker1.getCar() + "\n kupujacy:" + worker3.firstName + " ma car:" + worker3.getCar());
+        car1.sell(worker1, worker3, 50.00);
+        System.out.println("Po transakcja: sprzedający:" + worker1.firstName + " ma car:" + worker1.getCar() + "\n kupujacy:" + worker3.firstName + " ma car:" + worker3.getCar());
+
+        System.out.println("Przed transakcja: sprzedający:" + worker1.firstName + " ma phone:" + worker1.phone + "\n kupujacy:" + worker3.firstName + " ma phone:" + worker3.phone);
+        car1.sell(worker1, worker3, 50.00);
+        System.out.println("Po transakcja: sprzedający:" + worker1.firstName + " ma phone:" + worker1.phone + "\n kupujacy:" + worker3.firstName + " ma phone:" + worker3.phone);
     }
 }
